@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>swap images</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			border: 2px solid black;
+			display: inline-block;
+			margin: 10px;
+			overflow: hidden;
+		}
+		.box img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<table><tr>
+	<td><div class="box" id="box1">
+		<img src="n1.jpg" id="img1">
+	</div>
+	<div class="box" id="box2">
+		<img src="n2.jpg" id="img2">
+	</div></td></tr>
+	<br><br><tr><td>
+	<div class="box" id="box3">
+		<img src="n3.jpg" id="img3">
+	</div>
+	<div class="box" id="box4">
+		<img src="n4.jpg" id="img4">
+	</div></td></tr>
+	<br>
+	<br>
+	</table>
+	<script>
+		function swapImages() {
+			let img1=document.getElementById("img1").src;
+			let img2=document.getElementById("img2").src;
+			let img3=document.getElementById("img3").src;
+			let img4=document.getElementById("img4").src;
+			document.getElementById("img1").src=img4;
+			document.getElementById("img2").src=img3;
+			document.getElementById("img3").src=img2;
+			document.getElementById("img4").src=img1;
+
+		}
+	</script>
+
+<button onclick="swapImages()">swapimage</button>
+</body>
+</html>
